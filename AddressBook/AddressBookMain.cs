@@ -50,7 +50,6 @@ namespace AddressBook
                 Email = Console.ReadLine(),
             };
             addressList.Add(contact);
-            Display(addressList);
         }
         public void EditContact(string name)
         {
