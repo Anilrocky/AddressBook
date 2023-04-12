@@ -51,7 +51,41 @@ namespace AddressBook
             };
             addressList.Add(contact);
         }
-        
+        public void EditContact(string name)
+        {
+            foreach (var data in addressList)
+            {
+                if (data.FirstName.ToLower().Equals(name.ToLower()))
+                {
+                    Console.WriteLine("\nChoose option to edit contact \n1.Last name \n2.Address \n3.City \n4.State \n5.ZIP \n6.Phone number \n7.E-Mail");
+                    int option = Convert.ToInt32(Console.ReadLine());
+                    switch (option)
+                    {
+                        case 1:
+                            data.LastName = Console.ReadLine();
+                            break;
+                        case 2:
+                            data.Address = Console.ReadLine();
+                            break;
+                        case 3:
+                            data.City = Console.ReadLine();
+                            break;
+                        case 4:
+                            data.State = Console.ReadLine();
+                            break;
+                        case 5:
+                            data.ZIP = Console.ReadLine();
+                            break;
+                        case 6:
+                            data.PhoneNumber = Console.ReadLine();
+                            break;
+                        case 7:
+                            data.Email = Console.ReadLine();
+                            break;
+                    }
+                }
+            }
+        }
         public void Display()
         {
             foreach (var data in addressList)
