@@ -50,6 +50,7 @@ namespace AddressBook
                 Email = Console.ReadLine(),
             };
             addressList.Add(contact);
+            Display(addressList);
         }
         public void EditContact(string name)
         {
@@ -85,6 +86,21 @@ namespace AddressBook
                     }
                 }
             }
+        }
+        public void DeleteContact(string name)
+        {
+            Contacts contact = new Contacts();
+            foreach (var data in addressList)
+            {
+                if (data.FirstName.ToLower() == name.ToLower())
+                {
+                    contact = data;
+                }
+            }
+            if (contact == null)
+                Console.WriteLine("No contact exists with respect to first name");
+            else
+                addressList.Remove(contact);
         }
         public void Display()
         {
