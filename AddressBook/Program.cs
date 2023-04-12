@@ -15,6 +15,7 @@ namespace AddressBook
                 switch (option)
                 {
                     case 1:
+                        address.AddContact();
                         address.Display();
                         break;
                     case 2:

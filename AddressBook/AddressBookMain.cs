@@ -36,6 +36,21 @@ namespace AddressBook
             addressList.Add(contact1);
             addressList.Add(contact2);
         }
+        public void AddContact()
+        {
+            Contacts contact = new Contacts()
+            {
+                FirstName = Console.ReadLine(),
+                LastName = Console.ReadLine(),
+                Address = Console.ReadLine(),
+                City = Console.ReadLine(),
+                State = Console.ReadLine(),
+                ZIP = Console.ReadLine(),
+                PhoneNumber = Console.ReadLine(),
+                Email = Console.ReadLine(),
+            };
+            addressList.Add(contact);
+        }
         public void Display()
         {
             foreach (var data in addressList)
