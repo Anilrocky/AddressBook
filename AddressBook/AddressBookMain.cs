@@ -51,6 +51,7 @@ namespace AddressBook
             };
             addressList.Add(contact);
         }
+        
         public void Display()
         {
             foreach (var data in addressList)

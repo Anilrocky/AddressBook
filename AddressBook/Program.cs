@@ -16,6 +16,7 @@ namespace AddressBook
                 {
                     case 1:
                         address.AddContact();
+                        Console.WriteLine("Enter first name");
                         address.Display();
                         break;
                     case 2:
